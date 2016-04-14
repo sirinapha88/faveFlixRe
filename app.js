@@ -1,16 +1,17 @@
-var express 			= require("express"),
-	passport 			= require("passport"),
-	FacebookStrategy 	= require("passport-facebook").Strategy,
-	path 				= require("path"),
-	favicon 			= require("serve-favicon"),
-	logger 				= require("morgan"), 
-	methodOverride 		= require("method-override"),
-	cookieParser 		= require("cookie-parser"),
-	bodyParser 			= require("body-parser"),
-	knex 				= require("./db/knex");
-	require("dotenv").load();
+var express = require('express');
+var passport = require('passport');
+var FacebookStrategy = require('passport-facebook').Strategy;
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var methodOverride = require("method-override");
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var knex = require('./db/knex');
+require('dotenv').load();
 
-	var Users = function () {
+
+var Users = function () {
   return knex('users');
 };
 
@@ -112,9 +113,9 @@ app.use(function(err, req, res, next) {
   });
 });
 
-// var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
   
-// app.listen(PORT, function() {console.log("Listening on localhost:", PORT)});
+app.listen(PORT, function() {console.log("Listening on localhost:", PORT)});
 
 
 
