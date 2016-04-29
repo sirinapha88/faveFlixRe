@@ -44,7 +44,7 @@
               <% tvshowLists.forEach(function(tvshowList){ %>
                   <h3 id='title'> <%= tvshowList.name %></h3>
               <% if(tvshowList.poster_path === null) { %>
-                  <img src="/images/noimage.png" >
+                   <img src="/images/noimage.png" >
               <% } else { %>
                   <form action="/tvshows/tvInfo" method="post" id='heartBtn'>
                    <input type="hidden" name="tmdbID" value="<%=tvshowList.id %>">
@@ -70,9 +70,6 @@
           <% }) %>
         </div>
     </div>
-
-
-  
   </div>
   </body>
 </html>

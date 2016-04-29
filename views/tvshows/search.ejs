@@ -36,11 +36,12 @@
           </div>    </nav>
     <div class='col-md-3' id='poster-streams'>
       <% topRates.forEach(function(topRate){ %>
-        <div>
+        
           <img id ='index-posters-signup'src="http://image.tmdb.org/t/p/w500<%= topRate.poster_path %>" height="300" width="250" >
+
           <h4> <%= topRate.name %></h4>
           <h6> Rating: <%= topRate.vote_average %></h6>
-        </div>
+        
       <% }) %>
     </div>
     <div class='row'>
